@@ -1,0 +1,926 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="723.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <bottom>
+      <GridPane prefHeight="74.0" prefWidth="981.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="btnSubmit" mnemonicParsing="false" onAction="#submit" prefHeight="35.0" prefWidth="86.0" text="Submit" textAlignment="CENTER" GridPane.halignment="CENTER" />
+         </children>
+      </GridPane>
+   </bottom>
+   <top>
+      <TabPane prefHeight="583.0" prefWidth="723.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Chapel A">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <BorderPane prefHeight="514.0" prefWidth="723.0">
+                           <left>
+                              <GridPane prefHeight="429.0" prefWidth="483.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label alignment="CENTER" text="Name">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                       <children>
+                                          <Label text="Visitation">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                       <children>
+                                          <Label prefHeight="37.0" prefWidth="71.0" text="Funeral Home" wrapText="true">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                       <children>
+                                          <Label text="Church">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="4">
+                                       <children>
+                                          <Label text="Cemetery">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="5">
+                                       <children>
+                                          <Label text="Donations">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <VBox alignment="CENTER" prefHeight="90.0" prefWidth="402.0" GridPane.columnIndex="1">
+                                       <children>
+                                          <TextField fx:id="caName" promptText="First Last">
+                                             <VBox.margin>
+                                                <Insets right="10.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <children>
+                                          <TextField fx:id="caVisOne" promptText="Time for First Visitation">
+                                             <VBox.margin>
+                                                <Insets right="10.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <TextField fx:id="caVisTwo" promptText="Time for Second Visitation (Leave empty if none)">
+                                             <VBox.margin>
+                                                <Insets right="10.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <children>
+                                          <BorderPane prefHeight="36.0" prefWidth="402.0">
+                                             <top>
+                                                <HBox alignment="CENTER_LEFT" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <CheckBox fx:id="cbcaService" mnemonicParsing="false" prefHeight="18.0" prefWidth="139.0" text="No Service" />
+                                                      <TextField fx:id="caServiceLocation" prefHeight="27.0" prefWidth="315.0" promptText="Meeting Location">
+                                                         <HBox.margin>
+                                                            <Insets right="10.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                             </top>
+                                             <bottom>
+                                                <VBox alignment="CENTER_LEFT" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <TextField fx:id="caFHTime" promptText="Day and Time">
+                                                         <VBox.margin>
+                                                            <Insets right="10.0" />
+                                                         </VBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </VBox>
+                                             </bottom>
+                                          </BorderPane>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER" prefHeight="93.0" prefWidth="402.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <children>
+                                          <TextField fx:id="caChurchService" promptText="Service Type">
+                                             <VBox.margin>
+                                                <Insets right="10.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <ChoiceBox fx:id="caChurches" prefHeight="27.0" prefWidth="407.0">
+                                             <VBox.margin>
+                                                <Insets right="10.0" />
+                                             </VBox.margin>
+                                          </ChoiceBox>
+                                          <TextField fx:id="caChurchTime" promptText="Day and Time">
+                                             <VBox.margin>
+                                                <Insets right="10.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                       <children>
+                                          <TextField fx:id="caCemeteryService" promptText="Service Type">
+                                             <VBox.margin>
+                                                <Insets right="10.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <ChoiceBox fx:id="caCemeteries" prefHeight="27.0" prefWidth="510.0">
+                                             <VBox.margin>
+                                                <Insets right="10.0" />
+                                             </VBox.margin>
+                                          </ChoiceBox>
+                                          <TextField fx:id="caCemeteryTime" promptText="Day and Time">
+                                             <VBox.margin>
+                                                <Insets right="10.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </VBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                       <children>
+                                          <BorderPane>
+                                             <bottom>
+                                                <VBox prefHeight="53.0" prefWidth="402.0" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <TextField fx:id="caDonationFoundation" prefHeight="20.0" prefWidth="402.0" promptText="Foundation">
+                                                         <VBox.margin>
+                                                            <Insets right="10.0" />
+                                                         </VBox.margin>
+                                                      </TextField>
+                                                      <TextField fx:id="caDonationWebsite" promptText="Website or Address (Newline &lt;br&gt;)">
+                                                         <VBox.margin>
+                                                            <Insets right="10.0" />
+                                                         </VBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </VBox>
+                                             </bottom>
+                                             <top>
+                                                <BorderPane prefHeight="43.0" prefWidth="402.0" BorderPane.alignment="CENTER">
+                                                   <left>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                         <children>
+                                                            <CheckBox fx:id="cbcaDonation" mnemonicParsing="false" text="Donation" />
+                                                         </children>
+                                                      </HBox>
+                                                   </left>
+                                                   <right>
+                                                      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                         <center>
+                                                            <HBox alignment="CENTER_RIGHT" prefHeight="43.0" prefWidth="229.0" BorderPane.alignment="CENTER">
+                                                               <children>
+                                                                  <RadioButton fx:id="rbcaMale" mnemonicParsing="false" selected="true" text="Male">
+                                                                     <toggleGroup>
+                                                                        <ToggleGroup fx:id="genderc2" />
+                                                                     </toggleGroup>
+                                                                     <HBox.margin>
+                                                                        <Insets right="20.0" />
+                                                                     </HBox.margin>
+                                                                  </RadioButton>
+                                                                  <RadioButton fx:id="rbcaFemale" mnemonicParsing="false" text="Female" toggleGroup="$genderc2">
+                                                                     <HBox.margin>
+                                                                        <Insets right="10.0" />
+                                                                     </HBox.margin>
+                                                                  </RadioButton>
+                                                               </children>
+                                                            </HBox>
+                                                         </center>
+                                                      </BorderPane>
+                                                   </right>
+                                                </BorderPane>
+                                             </top>
+                                          </BorderPane>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="437.0" minWidth="10.0" prefWidth="86.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="814.0" minWidth="10.0" prefWidth="406.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="93.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="162.0" minHeight="10.0" prefHeight="77.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="146.0" minHeight="10.0" prefHeight="76.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="146.0" minHeight="10.0" prefHeight="103.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="165.0" minHeight="1.0" prefHeight="109.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="165.0" minHeight="10.0" prefHeight="95.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <BorderPane.margin>
+                                    <Insets top="5.0" />
+                                 </BorderPane.margin>
+                              </GridPane>
+                           </left>
+                           <right>
+                              <VBox alignment="CENTER" prefHeight="315.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <ImageView fx:id="caimg" fitHeight="240.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Button fx:id="btncaImage" alignment="CENTER" mnemonicParsing="false" onAction="#setImageA" text="Select Image">
+                                       <VBox.margin>
+                                          <Insets top="15.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                 </children>
+                                 <BorderPane.margin>
+                                    <Insets left="20.0" right="20.0" />
+                                 </BorderPane.margin>
+                              </VBox>
+                           </right>
+                        </BorderPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Chapel B">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <BorderPane prefHeight="514.0" prefWidth="723.0">
+                           <left>
+                              <GridPane prefHeight="429.0" prefWidth="483.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label alignment="CENTER" text="Name">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                       <children>
+                                          <Label text="Visitation">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                       <children>
+                                          <Label prefHeight="37.0" prefWidth="71.0" text="Funeral Home" wrapText="true">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                       <children>
+                                          <Label text="Church">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="4">
+                                       <children>
+                                          <Label text="Cemetery">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="5">
+                                       <children>
+                                          <Label text="Donations">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <VBox alignment="CENTER" prefHeight="90.0" prefWidth="402.0" GridPane.columnIndex="1">
+                                       <children>
+                                          <TextField fx:id="cbName" promptText="First Last">
+                                             <VBox.margin>
+                                                <Insets right="10.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <children>
+                                          <TextField fx:id="cbVisOne" promptText="Time for First Visitation">
+                                             <VBox.margin>
+                                                <Insets right="10.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <TextField fx:id="cbVisTwo" promptText="Time for Second Visitation (Leave empty if none)">
+                                             <VBox.margin>
+                                                <Insets right="10.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <children>
+                                          <BorderPane prefHeight="36.0" prefWidth="402.0">
+                                             <bottom>
+                                                <VBox alignment="CENTER_LEFT" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <TextField fx:id="cbFHTime" promptText="Day and Time">
+                                                         <VBox.margin>
+                                                            <Insets right="10.0" />
+                                                         </VBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </VBox>
+                                             </bottom>
+                                             <top>
+                                                <HBox alignment="CENTER_LEFT" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <CheckBox fx:id="cbcbService" mnemonicParsing="false" prefHeight="18.0" prefWidth="139.0" text="No Service" />
+                                                      <TextField fx:id="cbServiceLocation" prefHeight="27.0" prefWidth="315.0" promptText="Meeting Location">
+                                                         <HBox.margin>
+                                                            <Insets right="10.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                             </top>
+                                          </BorderPane>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER" prefHeight="93.0" prefWidth="402.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <children>
+                                          <TextField fx:id="cbChurchService" promptText="Service Type">
+                                             <VBox.margin>
+                                                <Insets right="10.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <ChoiceBox fx:id="cbChurches" prefHeight="27.0" prefWidth="407.0">
+                                             <VBox.margin>
+                                                <Insets right="10.0" />
+                                             </VBox.margin>
+                                          </ChoiceBox>
+                                          <TextField fx:id="cbChurchTime" promptText="Day and Time">
+                                             <VBox.margin>
+                                                <Insets right="10.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                       <children>
+                                          <TextField fx:id="cbCemeteryService" promptText="Service Type">
+                                             <VBox.margin>
+                                                <Insets right="10.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <ChoiceBox fx:id="cbCemeteries" prefHeight="27.0" prefWidth="510.0">
+                                             <VBox.margin>
+                                                <Insets right="10.0" />
+                                             </VBox.margin>
+                                          </ChoiceBox>
+                                          <TextField fx:id="cbCemeteryTime" promptText="Day and Time">
+                                             <VBox.margin>
+                                                <Insets right="10.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </VBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                       <children>
+                                          <BorderPane>
+                                             <bottom>
+                                                <VBox prefHeight="53.0" prefWidth="402.0" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <TextField fx:id="cbDonationFoundation" prefHeight="20.0" prefWidth="402.0" promptText="Foundation">
+                                                         <VBox.margin>
+                                                            <Insets right="10.0" />
+                                                         </VBox.margin>
+                                                      </TextField>
+                                                      <TextField fx:id="cbDonationWebsite" promptText="Website">
+                                                         <VBox.margin>
+                                                            <Insets right="10.0" />
+                                                         </VBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </VBox>
+                                             </bottom>
+                                             <top>
+                                                <BorderPane prefHeight="43.0" prefWidth="402.0" BorderPane.alignment="CENTER">
+                                                   <left>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                         <children>
+                                                            <CheckBox fx:id="cbcbDonation" mnemonicParsing="false" text="Donation" />
+                                                         </children>
+                                                      </HBox>
+                                                   </left>
+                                                   <right>
+                                                      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                         <center>
+                                                            <HBox alignment="CENTER_RIGHT" prefHeight="43.0" prefWidth="229.0" BorderPane.alignment="CENTER">
+                                                               <children>
+                                                                  <RadioButton fx:id="rbcbMale" mnemonicParsing="false" selected="true" text="Male">
+                                                                     <toggleGroup>
+                                                                        <ToggleGroup fx:id="genderc21" />
+                                                                     </toggleGroup>
+                                                                     <HBox.margin>
+                                                                        <Insets right="20.0" />
+                                                                     </HBox.margin>
+                                                                  </RadioButton>
+                                                                  <RadioButton fx:id="rbcbFemale" mnemonicParsing="false" text="Female" toggleGroup="$genderc21">
+                                                                     <HBox.margin>
+                                                                        <Insets right="10.0" />
+                                                                     </HBox.margin>
+                                                                  </RadioButton>
+                                                               </children>
+                                                            </HBox>
+                                                         </center>
+                                                      </BorderPane>
+                                                   </right>
+                                                </BorderPane>
+                                             </top>
+                                          </BorderPane>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="437.0" minWidth="10.0" prefWidth="86.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="814.0" minWidth="10.0" prefWidth="406.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="93.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="162.0" minHeight="10.0" prefHeight="77.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="146.0" minHeight="10.0" prefHeight="76.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="146.0" minHeight="10.0" prefHeight="103.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="165.0" minHeight="1.0" prefHeight="109.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="165.0" minHeight="10.0" prefHeight="95.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <BorderPane.margin>
+                                    <Insets top="5.0" />
+                                 </BorderPane.margin>
+                              </GridPane>
+                           </left>
+                           <right>
+                              <VBox alignment="CENTER" prefHeight="315.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <ImageView fx:id="cbimg" fitHeight="240.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Button fx:id="btncbImage" alignment="CENTER" mnemonicParsing="false" onAction="#setImageB" text="Select Image">
+                                       <VBox.margin>
+                                          <Insets top="15.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                 </children>
+                                 <BorderPane.margin>
+                                    <Insets left="20.0" right="20.0" />
+                                 </BorderPane.margin>
+                              </VBox>
+                           </right>
+                        </BorderPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Chapel C">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <BorderPane prefHeight="514.0" prefWidth="723.0">
+                           <left>
+                              <GridPane prefHeight="429.0" prefWidth="483.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label alignment="CENTER" text="Name">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                       <children>
+                                          <Label text="Visitation">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                       <children>
+                                          <Label prefHeight="37.0" prefWidth="71.0" text="Funeral Home" wrapText="true">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                       <children>
+                                          <Label text="Church">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="4">
+                                       <children>
+                                          <Label text="Cemetery">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="5">
+                                       <children>
+                                          <Label text="Donations">
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <VBox alignment="CENTER" prefHeight="90.0" prefWidth="402.0" GridPane.columnIndex="1">
+                                       <children>
+                                          <TextField fx:id="ccName" promptText="First Last">
+                                             <VBox.margin>
+                                                <Insets right="10.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <children>
+                                          <TextField fx:id="ccVisOne" promptText="Time for First Visitation">
+                                             <VBox.margin>
+                                                <Insets right="10.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <TextField fx:id="ccVisTwo" promptText="Time for Second Visitation (Leave empty if none)">
+                                             <VBox.margin>
+                                                <Insets right="10.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                       <children>
+                                          <BorderPane prefHeight="36.0" prefWidth="402.0">
+                                             <bottom>
+                                                <VBox alignment="CENTER_LEFT" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <TextField fx:id="ccFHTime" promptText="Day and Time">
+                                                         <VBox.margin>
+                                                            <Insets right="10.0" />
+                                                         </VBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </VBox>
+                                             </bottom>
+                                             <top>
+                                                <HBox alignment="CENTER_LEFT" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <CheckBox fx:id="cbccService" mnemonicParsing="false" prefHeight="18.0" prefWidth="139.0" text="No Service" />
+                                                      <TextField fx:id="ccServiceLocation" prefHeight="27.0" prefWidth="315.0" promptText="Meeting Location">
+                                                         <HBox.margin>
+                                                            <Insets right="10.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                             </top>
+                                          </BorderPane>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER" prefHeight="93.0" prefWidth="402.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                       <children>
+                                          <TextField fx:id="ccChurchService" promptText="Service Type">
+                                             <VBox.margin>
+                                                <Insets right="10.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <ChoiceBox fx:id="ccChurches" prefHeight="27.0" prefWidth="407.0">
+                                             <VBox.margin>
+                                                <Insets right="10.0" />
+                                             </VBox.margin>
+                                          </ChoiceBox>
+                                          <TextField fx:id="ccChurchTime" promptText="Day and Time">
+                                             <VBox.margin>
+                                                <Insets right="10.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                       <children>
+                                          <TextField fx:id="ccCemeteryService" promptText="Service Type">
+                                             <VBox.margin>
+                                                <Insets right="10.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <ChoiceBox fx:id="ccCemeteries" prefHeight="27.0" prefWidth="510.0">
+                                             <VBox.margin>
+                                                <Insets right="10.0" />
+                                             </VBox.margin>
+                                          </ChoiceBox>
+                                          <TextField fx:id="ccCemeteryTime" promptText="Day and Time">
+                                             <VBox.margin>
+                                                <Insets right="10.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </VBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                       <children>
+                                          <BorderPane>
+                                             <bottom>
+                                                <VBox prefHeight="53.0" prefWidth="402.0" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                      <TextField fx:id="ccDonationFoundation" prefHeight="20.0" prefWidth="402.0" promptText="Foundation">
+                                                         <VBox.margin>
+                                                            <Insets right="10.0" />
+                                                         </VBox.margin>
+                                                      </TextField>
+                                                      <TextField fx:id="ccDonationWebsite" promptText="Website">
+                                                         <VBox.margin>
+                                                            <Insets right="10.0" />
+                                                         </VBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </VBox>
+                                             </bottom>
+                                             <top>
+                                                <BorderPane prefHeight="43.0" prefWidth="402.0" BorderPane.alignment="CENTER">
+                                                   <left>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                         <children>
+                                                            <CheckBox fx:id="cbccDonation" mnemonicParsing="false" text="Donation" />
+                                                         </children>
+                                                      </HBox>
+                                                   </left>
+                                                   <right>
+                                                      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                                         <center>
+                                                            <HBox alignment="CENTER_RIGHT" prefHeight="43.0" prefWidth="229.0" BorderPane.alignment="CENTER">
+                                                               <children>
+                                                                  <RadioButton fx:id="rbccMale" mnemonicParsing="false" selected="true" text="Male">
+                                                                     <toggleGroup>
+                                                                        <ToggleGroup fx:id="genderc22" />
+                                                                     </toggleGroup>
+                                                                     <HBox.margin>
+                                                                        <Insets right="20.0" />
+                                                                     </HBox.margin>
+                                                                  </RadioButton>
+                                                                  <RadioButton fx:id="rbccFemale" mnemonicParsing="false" text="Female" toggleGroup="$genderc22">
+                                                                     <HBox.margin>
+                                                                        <Insets right="10.0" />
+                                                                     </HBox.margin>
+                                                                  </RadioButton>
+                                                               </children>
+                                                            </HBox>
+                                                         </center>
+                                                      </BorderPane>
+                                                   </right>
+                                                </BorderPane>
+                                             </top>
+                                          </BorderPane>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="437.0" minWidth="10.0" prefWidth="86.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="814.0" minWidth="10.0" prefWidth="406.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints maxHeight="93.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="162.0" minHeight="10.0" prefHeight="77.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="146.0" minHeight="10.0" prefHeight="76.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="146.0" minHeight="10.0" prefHeight="103.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="165.0" minHeight="1.0" prefHeight="109.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="165.0" minHeight="10.0" prefHeight="95.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <BorderPane.margin>
+                                    <Insets top="5.0" />
+                                 </BorderPane.margin>
+                              </GridPane>
+                           </left>
+                           <right>
+                              <VBox alignment="CENTER" prefHeight="315.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <ImageView fx:id="ccimg" fitHeight="240.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Button fx:id="btnccImage" alignment="CENTER" mnemonicParsing="false" onAction="#setImageC" text="Select Image">
+                                       <VBox.margin>
+                                          <Insets top="15.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                 </children>
+                                 <BorderPane.margin>
+                                    <Insets left="20.0" right="20.0" />
+                                 </BorderPane.margin>
+                              </VBox>
+                           </right>
+                        </BorderPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Add Location">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="412.0" prefWidth="723.0">
+                     <children>
+                        <GridPane layoutX="262.0" layoutY="107.0" prefWidth="723.0" AnchorPane.bottomAnchor="133.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="355.0" minWidth="10.0" prefWidth="115.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="619.0" minWidth="10.0" prefWidth="608.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="81.0" minHeight="0.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="108.0" minHeight="10.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="137.0" minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="279.0" minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="225.0" minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="213.0" minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="205.0" minHeight="10.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <CheckBox mnemonicParsing="false" text="CheckBox" GridPane.columnIndex="1" />
+                              <CheckBox mnemonicParsing="false" text="CheckBox" GridPane.columnIndex="1" />
+                              <ComboBox prefWidth="150.0" GridPane.columnIndex="1" />
+                              <ChoiceBox fx:id="cbLoc" prefHeight="27.0" prefWidth="646.0" GridPane.columnIndex="1">
+                                 <GridPane.margin>
+                                    <Insets right="10.0" />
+                                 </GridPane.margin>
+                              </ChoiceBox>
+                              <Label text="Location">
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label text="Name" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label text="Street Address" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label text="City" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label text="State" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label text="Zip Code" GridPane.rowIndex="5">
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <TextField fx:id="locName" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets right="10.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="locAddress" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets right="10.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="locCity" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets right="10.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="locState" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets right="10.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <TextField fx:id="locZipCode" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                 <GridPane.margin>
+                                    <Insets right="10.0" />
+                                 </GridPane.margin>
+                              </TextField>
+                              <Button fx:id="btnLoc" mnemonicParsing="false" onAction="#addLocation" prefHeight="27.0" prefWidth="186.0" text="Submit Location" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Delete Location">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <BorderPane layoutX="65.0" layoutY="32.0" prefHeight="533.0" prefWidth="723.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <center>
+                              <FlowPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="412.0" prefWidth="723.0">
+                                       <children>
+                                          <GridPane layoutX="262.0" layoutY="107.0" prefHeight="112.0" prefWidth="723.0" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <Label text="Type">
+                                                   <GridPane.margin>
+                                                      <Insets left="10.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <Label text="Location" GridPane.rowIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets left="10.0" />
+                                                   </GridPane.margin>
+                                                </Label>
+                                                <ChoiceBox fx:id="cbDelLoc" prefHeight="27.0" prefWidth="667.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets right="10.0" />
+                                                   </GridPane.margin>
+                                                </ChoiceBox>
+                                                <GridPane alignment="CENTER" prefHeight="31.0" prefWidth="491.0" GridPane.columnIndex="1">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="304.0" minWidth="10.0" prefWidth="304.0" />
+                                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="304.0" minWidth="10.0" prefWidth="304.0" />
+                                                  </columnConstraints>
+                                                  <rowConstraints>
+                                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                  </rowConstraints>
+                                                   <children>
+                                                      <RadioButton fx:id="rbChurch" contentDisplay="CENTER" mnemonicParsing="false" onAction="#updateDelLocations" prefHeight="18.0" prefWidth="71.0" text="Church" GridPane.halignment="CENTER">
+                                                         <toggleGroup>
+                                                            <ToggleGroup fx:id="delType" />
+                                                         </toggleGroup>
+                                                      </RadioButton>
+                                                      <RadioButton fx:id="rbCemetery" mnemonicParsing="false" onAction="#updateDelLocations" prefHeight="18.0" prefWidth="89.0" text="Cemetery" toggleGroup="$delType" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                                   </children>
+                                                </GridPane>
+                                                <Button fx:id="btnDelLoc" mnemonicParsing="false" onAction="#delLocation" prefHeight="27.0" prefWidth="188.0" text="Delete Location" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                                             </children>
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="355.0" minWidth="10.0" prefWidth="115.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="619.0" minWidth="10.0" prefWidth="608.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints maxHeight="81.0" minHeight="0.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="108.0" minHeight="10.0" vgrow="SOMETIMES" />
+                                                <RowConstraints maxHeight="205.0" minHeight="10.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                          </GridPane>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </FlowPane>
+                           </center>
+                        </BorderPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </top>
+</BorderPane>
